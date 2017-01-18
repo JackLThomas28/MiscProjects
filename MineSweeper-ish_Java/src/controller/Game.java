@@ -1,4 +1,4 @@
-package cs2410.assn8.controller;
+package controller;
 
 import java.awt.Color;
 import java.awt.event.MouseEvent;
@@ -54,7 +54,7 @@ public class Game implements MouseListener{
 	 */
 	private boolean firstClick = true;
 	/**
-	 * An integer to store the number of clicked cells to check if the player has won the game 
+	 * An integer to store the number of clicked cells to check if the player has won the game
 	 */
 	private int numberOfClickedCells = 0;
 	/**
@@ -110,7 +110,7 @@ public class Game implements MouseListener{
 		}
 	}
 	/**
-	 * Method that locates all of the neighboring bombs after they have been placed throughout the board and 
+	 * Method that locates all of the neighboring bombs after they have been placed throughout the board and
 	 * inits the cell's neighborbombcount
 	 */
 	private void findBombs(){
@@ -118,7 +118,7 @@ public class Game implements MouseListener{
 		for(int i = 0; i < tempCell.length; i++){
 			for(int j = 0; j < tempCell[i].length; j++){
 				int neighborBombs = checkForBombs(tempCell[i][j]);
-				tempCell[i][j].setNeighboringBombCount(neighborBombs);				
+				tempCell[i][j].setNeighboringBombCount(neighborBombs);
 			}
 		}
 	}
@@ -148,7 +148,7 @@ public class Game implements MouseListener{
 		}
 	}
 	/**
-	 * Method that checks the neighboring Cells, including diagonals of the given cell 
+	 * Method that checks the neighboring Cells, including diagonals of the given cell
 	 * @param temp
 	 * @return
 	 */
@@ -207,7 +207,7 @@ public class Game implements MouseListener{
 	private void leftClicked(Cell temp){
 		if(playerLoses || playerWins)return; //Making sure the player can't click any cells once the game has ended until they click the reset button
 		if(temp.getState() == CellState.FLAGGED)return; //Making sure the player can't click any cells that are currently flagged
-		
+
 		if(firstClick){
 			firstClick = false;
 			gameFrame.startCountUp();
@@ -273,14 +273,14 @@ public class Game implements MouseListener{
 
 			@Override
 			public void run() {
-				new Game();				
+				new Game();
 			}});
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 	/**
 	 * When the mouse is left pressed, change the reset button icon to a surprised face
@@ -290,7 +290,7 @@ public class Game implements MouseListener{
 		// TODO Auto-generated method stub
 		if(e.getSource() instanceof Cell){
 			if(SwingUtilities.isLeftMouseButton(e)){
-				gameFrame.setButtonSurprised();			
+				gameFrame.setButtonSurprised();
 			}
 		}
 	}
@@ -333,13 +333,13 @@ public class Game implements MouseListener{
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

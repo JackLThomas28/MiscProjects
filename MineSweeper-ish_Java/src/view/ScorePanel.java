@@ -1,4 +1,4 @@
-package cs2410.assn8.view;
+package view;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -59,7 +59,7 @@ public class ScorePanel extends JPanel{
 	 * A font, sets the font to bold, size 15, and "Impact"
 	 */
 	private Font myFont = new Font("Impact", Font.BOLD, 15);
-	
+
 	/**
 	 * The constructor for the ScorePanel object, sets fonts, layouts, texts, and adds them to the panel
 	 * @param ml
@@ -148,8 +148,8 @@ public class ScorePanel extends JPanel{
 				timerLabel.setText(Integer.toString(currentTime));
 				temp.update(temp.getGraphics());
 			}
-			
-		}, 0, 1000); 
+
+		}, 0, 1000);
 	}
 	/**
 	 * Method to stop the timer from counting up

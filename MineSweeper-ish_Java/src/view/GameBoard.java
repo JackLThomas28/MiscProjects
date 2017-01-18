@@ -1,4 +1,4 @@
-package cs2410.assn8.view;
+package view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -206,13 +206,13 @@ public class GameBoard extends JPanel{
 			return neighbors;
 		}
 	}
-	
-	
+
+
 	/**
 	 * A 2D array of Cell class instances
 	 */
 	private Cell[][] cell;
-	
+
 	/**
 	 * GameBoard class constructor, initializes GameBoard variables
 	 * @param size
@@ -222,7 +222,7 @@ public class GameBoard extends JPanel{
 		this.setPreferredSize(new Dimension(500,500));
 		this.setLayout(new GridLayout(size, size, 2, 2));
 		cell = new Cell[size][size];
-		
+
 		//Adding each cell of the 2D array to the GameBoard JPanel
 		for(int row = 0; row < cell.length; row++){
 			for(int col = 0; col < cell[row].length; col++){
@@ -274,49 +274,49 @@ public class GameBoard extends JPanel{
 					cell[i][j].addNeighbor(cell[i - 1][j - 1]);
 				}
 				catch(ArrayIndexOutOfBoundsException e){
-					
+
 				}
 				try{
 					cell[i][j].addNeighbor(cell[i - 1][j]);
 				}
 				catch(ArrayIndexOutOfBoundsException e){
-					
+
 				}
 				try{
 					cell[i][j].addNeighbor(cell[i - 1][j + 1]);
 				}
 				catch(ArrayIndexOutOfBoundsException e){
-					
+
 				}
 				try{
 					cell[i][j].addNeighbor(cell[i][j - 1]);
 				}
 				catch(ArrayIndexOutOfBoundsException e){
-					
+
 				}
 				try{
 					cell[i][j].addNeighbor(cell[i][j + 1]);
 				}
 				catch(ArrayIndexOutOfBoundsException e){
-					
+
 				}
 				try{
 					cell[i][j].addNeighbor(cell[i + 1][j - 1]);
 				}
 				catch(ArrayIndexOutOfBoundsException e){
-					
+
 				}
 				try{
 					cell[i][j].addNeighbor(cell[i + 1][j]);
 				}
 				catch(ArrayIndexOutOfBoundsException e){
-					
+
 				}
 				try{
 					cell[i][j].addNeighbor(cell[i + 1][j + 1]);
 				}
 				catch(ArrayIndexOutOfBoundsException e){
-					
+
 				}
 			}
 		}

@@ -1,4 +1,4 @@
-package cs2410.assn8.view;
+package view;
 
 import java.awt.BorderLayout;
 import java.awt.event.MouseListener;
@@ -26,7 +26,7 @@ public class GameFrame extends JFrame{
 	 * The JPanel that contains the GameBoard Panel and ScorePanel Panel
 	 */
 	private JPanel pane;
-	
+
 	public GameFrame(int size, MouseListener ml){
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("Minesweeper-ish");
