@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <% include partials/jsDefaults.ejs %>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <ul>
+      <li id="main-content" class="Form">
+        <h2 id="new-note-header">New Note</h2>
+        <form id="form" action='api/submit' method='POST'>
+          <input id="note-key-box" name='key' placeholder="Enter key here">
+          <input id="note-title-box" name='title' placeholder="Enter title here">
+          <input id="note-body-box" name='body' placeholder="Enter your note here">
+          <a id="submit-button">Submit</a>
+        </form>
+        <button id="clear">Clear Entries</button>
+      </li>
+      <li id="main-content" class="notesList">
+        <h2 id="notes-header">Notes</h2>
+          <ul class="notes" id="notes-list">
+          <% notes.forEach(function(item){ %>
+            <li>
+              <a class="noteLinks" href="/note/<%= item.notekey %>">
+                <h3><%= item.title %></h3>
+                <h4><%= item.notekey %></h4>
+                <p><%=  item.body  %></p>
+              </a>
+              <ul>
+                <li class="delete-edit"><p class="delete-button" id="<%= item.notekey %>-delete">Delete</p></li>
+                <li class="delete-edit"><a id="<%= item.notekey %>-edit" class="edit-button" href="/edit/<%= item.notekey %>">Edit</a></li>
+              </ul>
+              <div class="separator"><p></p></div>
+            </li>
+          <% }); %>
+          </ul>
+      </li>
+    </ul>
+  </body>
+</html>

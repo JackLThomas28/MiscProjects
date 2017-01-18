@@ -1,0 +1,126 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.separator {
+  border-bottom: 1px solid black;
+}
+
+input {
+  display: block;
+  margin-bottom: 1%;
+}
+
+input#note-body-box {
+  height: 33px;
+}
+
+li#main-content {
+  /*display: inline-block;*/
+}
+
+/*
+li.Form {
+  position: relative;
+  top: -410px;
+}
+*/
+
+a.noteLinks {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+form {
+  padding-bottom: 5px;
+}
+
+/*Buttons*/
+p.delete-button {
+  color: white;
+  background-color: black;
+  /*text-decoration: underline;*/
+  cursor: pointer;
+  border: 2px solid black;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+p.delete-button:hover {
+  color: white;
+  background-color: DimGray;
+  text-decoration: underline;
+  cursor: pointer;
+  border: 2px solid DimGray;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+a.edit-button {
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  border: 2px solid black;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+a.edit-button:hover {
+  color: white;
+  background-color: DimGray;
+  border: 2px solid DimGray;
+  text-decoration: underline;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+a.submit-changes-button {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  border: 2px solid black;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+a.submit-changes-button:hover {
+  text-decoration: underline;
+  color: white;
+  background-color: DimGray;
+  cursor: pointer;
+  border: 2px solid DimGray;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+a#submit-button {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  border: 2px solid black;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 2px;
+}
+
+a#submit-button:hover {
+  text-decoration: underline;
+  color: white;
+  background-color: DimGray;
+  cursor: pointer;
+  border: 2px solid DimGray;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+li.delete-edit {
+  display: inline-block;
+}

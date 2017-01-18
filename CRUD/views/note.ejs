@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p><%= note.notekey %></p>
+    <p><%= note.title %></p>
+    <p><%= note.body %></p>
+    <ul class="delete-edit">
+      <li class="delete-edit"><p class="delete-button" id="<%= note.notekey %>-delete">Delete</p></li>
+      <li class="delete-edit"><a id="<%= note.notekey %>-edit" class="edit-button" href="/edit/<%= note.notekey %>">Edit</a></li>
+    </ul>
+    <% include partials/jsDefaults.ejs %>
+  </body>
+</html>

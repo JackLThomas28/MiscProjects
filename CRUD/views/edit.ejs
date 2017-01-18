@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <% include partials/jsDefaults.ejs %>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <ul class="header">
+      <li><h2 id="new-note-header">Edit Note</h2></li>
+    </ul>
+    <ul class="main-content">
+      <li>
+        <form id="form" action='api/submit' method='POST'>
+          <p id="note-key-box" name='key'><%= note.notekey %></p>
+          <input id="note-title-box" name='title' value="<%= note.title %>">
+          <input id="note-body-box" name='body' value="<%= note.body %>">
+          <a id="<%= note.notekey %>-change-button" class="submit-changes-button">Submit Changes</a>
+        </form>
+        <button id="clear">Clear Entries</button>
+        <a id="cancel" href="/">Cancel</a>
+      </li>
+    </ul>
+  </body>
+</html>
