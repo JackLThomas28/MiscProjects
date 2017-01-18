@@ -1,5 +1,5 @@
 # Resume_Links
-A few demonstrations of code that I have written for classes and other personal projects.
+A few demonstrations of code that I have written for classes and other personal projects. Please see the individual descriptions below. 
 
 ## MineSweeper-ish
 Under the MineSweeper-ish directory, you will find the code for a MineSweeper-like game that I coded up for my Java GUIs class. The source code is located under the src directory.
