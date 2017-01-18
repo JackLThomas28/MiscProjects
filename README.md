@@ -1,5 +1,5 @@
 # Resume_Links
-A repository containing code that is linked to on my resume.
+A few demonstrations of code that I have written for classes and other personal projects.
 
 ## MineSweeper-ish
 Under the MineSweeper-ish directory, you will find the code for a MineSweeper-like game that I coded up for my Java GUIs class. The source code is located under the src directory.
