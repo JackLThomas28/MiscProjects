@@ -1,4 +1,4 @@
-# Resume_Links
+# Miscellaneous Projects
 A few demonstrations of code that I have written for classes and other personal projects. Please see the individual descriptions below. 
 
 ## MineSweeper-ish
